@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^12.8.3",
     "cross-fetch": "^3.1.4",
     "fa-icons": "^0.2.0",
+    "firebase": "^8.7.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.4",

@@ -1,5 +1,5 @@
 import './App.css';
-import  FriendListDashboard from './components/friend-list-dashboard';
+import  {FriendListDashboard} from './components/friend-list-dashboard';
 
 function App() {
   return (
