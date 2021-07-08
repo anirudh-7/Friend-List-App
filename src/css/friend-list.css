@@ -1,3 +1,94 @@
 .Dashboard {
     text-align: left;
+    background-color: '#f0f0f0';
   }
+
+.Dashboard-header {
+  background-color: #0000A3;
+  color: whitesmoke;
+  padding-left: 10px;
+}
+
+.Dashboard-main-container{
+  background-color: #f7eeee;
+  width: 500px;
+}
+
+.Dasboard-footer-container{
+  background-color: #fff6f6;
+  width: 500px;
+}
+
+.Dashboard-container{
+  padding-left: 40px;
+  padding-bottom: 10px;
+}
+
+.Dashboard-Text-Input{
+  height: 20px;
+  width: 300px;
+  border-radius: 3px;
+  border: 1px solid #0000A3;
+}
+
+.Dashboard-User-Icon{
+  height: 20px;
+  width: 20px;
+}
+
+.Dashboard-User-Btn{
+  margin-left: 20px;
+  margin-top: 5px;
+  border: 1px solid #0000A3;
+  border-radius: 2px;
+  background-color: white;
+  position: relative;
+  top:2px;
+}
+
+.Friend-Card-Container{
+  padding-left: 80px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.Pagination-Footer{
+  padding-left: 175px;
+}
+
+.Friend-Card
+  {width: 300px;
+   padding-left: 10px;
+   border: 1px solid #0000A3; 
+   border-radius: 5px;
+   padding-bottom: 10px;
+   margin-bottom: 5px;
+   background-color: white;
+}
+
+.Friend-Profile{
+  width: 70%;
+  margin-right: 50px;
+}
+
+.Friend-Actions{
+  width: 30%;
+  position: absolute;
+  left: 300px;
+  padding-top: 20px;
+}
+
+.Friend-Name-lbl{
+  position: relative;
+  top: -12px;
+}
+
+.Friend-User-Btn{
+  margin-left: 5px;
+  margin-top: 5px;
+  border: 1px solid #0000A3;
+  border-radius: 2px;
+  background-color: white;
+  position: relative;
+  top:2px;
+}

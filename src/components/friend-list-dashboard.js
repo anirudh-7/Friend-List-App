@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-// import { connect } from 'react-redux';
+import '../css/friend-list.css';
 import { FriendListCard } from './friend-list-card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserPlus, faSearch, faArrowLeft, faArrowRight, faFilter, faSearchMinus, faMinusSquare } from '@fortawesome/free-solid-svg-icons'
@@ -128,38 +128,43 @@ const FriendListDashboard = ({friendList, addFriend, removeFriend, getFriendList
     }
 
     return(
-        <div style={{backgroundColor: 'lightcyan', height: '100%', }}>
-            <div style={{textAlign: 'left', backgroundColor: 'blue', color:'white'}}>
-                <h2>Friends List</h2>
+        <div className="Dashboard">
+            <div className="Dashboard-main-container">
+                <div className='Dashboard-header'>
+                    <h2> Friends List</h2>
+                </div>
+                <div className="Dashboard-container" >
+                    <input className="Dashboard-Text-Input" placeholder="Enter Name" value={name} onChange={e => setName(e.target.value)} ></input>
+                    <button className="Dashboard-User-Btn" onClick={handleAdd}><FontAwesomeIcon icon={faUserPlus} className="Dashboard-User-Icon"/></button>  
+                    <br></br>
+                    {(isInvalid && name.length > 0) && <span style={{color:'red'}}>{errorMessage}</span>}
+                </div>
+                <div className="Dashboard-container" >
+                    <input className="Dashboard-Text-Input" placeholder="Search Name" value={searchName} onChange={e => setSearchName(e.target.value)}></input>
+                    <button  className="Dashboard-User-Btn" onClick={handleSearch}><FontAwesomeIcon icon={faSearch} className="Dashboard-User-Icon"/></button>
+                    <button className="Dashboard-User-Btn" onClick={resetSearch}><FontAwesomeIcon icon={faSearchMinus} className="Dashboard-User-Icon"/></button>
+                </div>
+                <div className="Dashboard-container">
+                    <button className="Dashboard-User-Btn"  style={{padding:'4px'}} onClick={filterFavorite}><FontAwesomeIcon icon={faFilter} className="Dashboard-User-Icon" style={{paddingRight: '5px'}}/>Filter favorite</button>
+                    <button className="Dashboard-User-Btn" style={{padding:'4px'}} onClick={resetFilterFavorite}><FontAwesomeIcon icon={faMinusSquare} className="Dashboard-User-Icon" style={{paddingRight: '5px'}}/>Clear Filter</button>
+                </div>
             </div>
-            <div style={{paddingLeft: '40px', paddingBottom: '10px'}}>
-                <input placeholder="Enter Name" value={name} onChange={e => setName(e.target.value)} ></input>
-                <button onClick={handleAdd}><FontAwesomeIcon icon={faUserPlus} style={{ height:'20px', width:'20px'}}/></button>  
-                <br></br>
-                {(isInvalid && name.length > 0) && <span style={{color:'red'}}>{errorMessage}</span>}
-            </div>
-            <div style={{paddingLeft: '40px', paddingBottom: '10px'}}>
-                <input placeholder="Search Name" value={searchName} onChange={e => setSearchName(e.target.value)}></input>
-                <button onClick={handleSearch}><FontAwesomeIcon icon={faSearch} style={{paddingLeft: '5px', height:'20px', width:'20px'}}/></button>
-                <button onClick={resetSearch}><FontAwesomeIcon icon={faSearchMinus} style={{paddingLeft: '5px', height:'20px', width:'20px'}}/></button>
-            </div>
-            <div style={{paddingLeft: '40px', paddingBottom: '10px'}}>
-            <button onClick={filterFavorite}><FontAwesomeIcon icon={faFilter} style={{paddingLeft: '5px', height:'20px', width:'20px'}}/>Filter favorite</button>
-                <button onClick={resetFilterFavorite}><FontAwesomeIcon icon={faMinusSquare} style={{paddingLeft: '5px', height:'20px', width:'20px'}}/>Clear Filter</button>
-            </div>
-            <div  style={{paddingLeft: '10px'}}>
-                {displayList.map( i =>
-                    (<FriendListCard key={i.id} id={i.id} name={i.name} favorite={i.isFavorite} addFavorite={setFavorite} removeFriend={handleDelete}/>))}
-                
-            </div>
-            <div>
-                <span>
-                    { pageNumber > 1 &&
-                        <button onClick={(event) => handlePagination('left', event)}><FontAwesomeIcon icon={faArrowLeft} style={{paddingLeft: '5px', height:'20px', width:'20px'}}/></button>}
-                    <label>{pageNumber}</label>
-                    { displayList.length >=4 &&
-                        <button onClick={(event) => handlePagination('right', event)}><FontAwesomeIcon icon={faArrowRight} style={{paddingLeft: '5px', height:'20px', width:'20px'}}/></button>}
-                </span> 
+            <div className="Dasboard-footer-container">
+                {displayList.length > 0 && <h3 className='Dashboard-header'>List of Friends</h3>}
+                <div className="Friend-Card-Container">
+                    {displayList.map( i =>
+                        (<FriendListCard key={i.id} id={i.id} name={i.name} favorite={i.isFavorite} addFavorite={setFavorite} removeFriend={handleDelete}/>))}     
+                </div>
+                <div className="Pagination-Footer">
+                    <span>
+                        { pageNumber > 1 &&
+                            <button className="Dashboard-User-Btn" onClick={(event) => handlePagination('left', event)}><FontAwesomeIcon icon={faArrowLeft} className="Dashboard-User-Icon"/></button>}
+                            
+                        { displayList.length >=4 &&
+                            <button className="Dashboard-User-Btn" onClick={(event) => handlePagination('right', event)}><FontAwesomeIcon icon={faArrowRight} className="Dashboard-User-Icon"/></button>}
+                    </span>
+                    <div style={{paddingLeft:'16px'}}>Page No: <label>{pageNumber}</label></div> 
+                </div>
             </div>
         </div>
     )
