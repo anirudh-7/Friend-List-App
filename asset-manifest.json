@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Friend-List-App/static/css/main.cb2859a6.chunk.css",
+    "main.js": "/Friend-List-App/static/js/main.a73bae03.chunk.js",
+    "main.js.map": "/Friend-List-App/static/js/main.a73bae03.chunk.js.map",
+    "runtime-main.js": "/Friend-List-App/static/js/runtime-main.0ea4a1d3.js",
+    "runtime-main.js.map": "/Friend-List-App/static/js/runtime-main.0ea4a1d3.js.map",
+    "static/js/2.ec407801.chunk.js": "/Friend-List-App/static/js/2.ec407801.chunk.js",
+    "static/js/2.ec407801.chunk.js.map": "/Friend-List-App/static/js/2.ec407801.chunk.js.map",
+    "static/js/3.e4872ae0.chunk.js": "/Friend-List-App/static/js/3.e4872ae0.chunk.js",
+    "static/js/3.e4872ae0.chunk.js.map": "/Friend-List-App/static/js/3.e4872ae0.chunk.js.map",
+    "index.html": "/Friend-List-App/index.html",
+    "static/css/main.cb2859a6.chunk.css.map": "/Friend-List-App/static/css/main.cb2859a6.chunk.css.map",
+    "static/js/2.ec407801.chunk.js.LICENSE.txt": "/Friend-List-App/static/js/2.ec407801.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0ea4a1d3.js",
+    "static/js/2.ec407801.chunk.js",
+    "static/css/main.cb2859a6.chunk.css",
+    "static/js/main.a73bae03.chunk.js"
+  ]
+}
